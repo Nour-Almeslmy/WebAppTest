@@ -8,7 +8,8 @@ namespace ProjTestDep.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        public ActionResult<string> GetValue()
+        [HttpGet]
+        public ActionResult<string> Get()
         {
             var class1 = new Class1();
             return Ok(class1.Value);
